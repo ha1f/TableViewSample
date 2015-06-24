@@ -38,6 +38,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet var table: UITableView!
     
     //リスト
+    let names = ["a","b","c","d","r","f","g"]
     let texts = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     
     
@@ -63,8 +64,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell0") as! MyCell
         //indexPath.rowに何行目か、indexPath.sectionに何セクションあるかが指定される。それによりでーたを呼び出す。
-        cell.nameLabel.text = texts[indexPath.row]
-        cell.nameLabel.text = texts[indexPath.row]
+        cell.nameLabel.text = names[indexPath.row]
+        cell.subLabel.text = texts[indexPath.row]
         cell.icon.image = UIImage(named: "IMG_0232.JPG")
         
         
