@@ -13,6 +13,8 @@
 		A45453521B3B07960061083F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A45453511B3B07960061083F /* Images.xcassets */; };
 		A45453551B3B07960061083F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A45453531B3B07960061083F /* LaunchScreen.xib */; };
 		A45453611B3B07960061083F /* tableSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45453601B3B07960061083F /* tableSampleTests.swift */; };
+		A454536C1B3B07C10061083F /* IMG_0232.JPG in Resources */ = {isa = PBXBuildFile; fileRef = A454536A1B3B07C10061083F /* IMG_0232.JPG */; };
+		A454536D1B3B07C10061083F /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A454536B1B3B07C10061083F /* MyCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		A454535A1B3B07960061083F /* tableSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tableSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A454535F1B3B07960061083F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A45453601B3B07960061083F /* tableSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableSampleTests.swift; sourceTree = "<group>"; };
+		A454536A1B3B07C10061083F /* IMG_0232.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0232.JPG; sourceTree = "<group>"; };
+		A454536B1B3B07C10061083F /* MyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				A454534A1B3B07960061083F /* AppDelegate.swift */,
+				A454536A1B3B07C10061083F /* IMG_0232.JPG */,
+				A454536B1B3B07C10061083F /* MyCell.swift */,
 				A454534C1B3B07960061083F /* ViewController.swift */,
 				A454534E1B3B07960061083F /* Main.storyboard */,
 				A45453511B3B07960061083F /* Images.xcassets */,
@@ -194,6 +200,7 @@
 			files = (
 				A45453501B3B07960061083F /* Main.storyboard in Resources */,
 				A45453551B3B07960061083F /* LaunchScreen.xib in Resources */,
+				A454536C1B3B07C10061083F /* IMG_0232.JPG in Resources */,
 				A45453521B3B07960061083F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A454536D1B3B07C10061083F /* MyCell.swift in Sources */,
 				A454534D1B3B07960061083F /* ViewController.swift in Sources */,
 				A454534B1B3B07960061083F /* AppDelegate.swift in Sources */,
 			);
