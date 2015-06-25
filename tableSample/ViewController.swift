@@ -20,7 +20,7 @@
 7. AttributesInspecterからIdentiferを指定(今回はcell0)
 8. ConnectionsInspecterからTableCell上のパーツとMyCell.swift内のパーツを関連付け。
 <セルをコードから制御する>
-9. UITableViewのIBOutletをclass内に定義する
+9. UITableViewのIBOutletをclass内に定義する(今回はtable)
 10. classの定義文の後ろに, UITableViewDataSource, UITableViewDelegateを追加（コード参照）
 11. classの内部にセルの個数を返す関数
 func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{}
@@ -28,7 +28,11 @@ func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> In
 func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {}
 を記述する
 (コード参照)
-12. Run!
+12. viewDidLoadに
+table.dataSource=self
+table.delegate=self
+を記述する
+13. Run!
 */
 
 import UIKit
@@ -38,8 +42,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet var table: UITableView!
     
     //リスト
-    let names = ["a","b","c","d","r","f","g"]
+    let names = ["a","b","c","d","e","f","g"]
     let texts = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    let imagePaths = ["IMG_0232.JPG", "IMG_0232.JPG", "IMG_0232.JPG", "IMG_0232.JPG", "IMG_0232.JPG", "IMG_0232.JPG", "IMG_0232.JPG"]
     
     
     override func viewDidLoad() {
@@ -63,10 +68,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     //セルの内容を変更
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell0") as! MyCell
-        //indexPath.rowに何行目か、indexPath.sectionに何セクションあるかが指定される。それによりでーたを呼び出す。
+        //indexPath.rowに何行目か、indexPath.sectionに何セクション目かが与えられる。それによりデータを呼び出してセルに適用
         cell.nameLabel.text = names[indexPath.row]
         cell.subLabel.text = texts[indexPath.row]
-        cell.icon.image = UIImage(named: "IMG_0232.JPG")
+        cell.icon.image = UIImage(named: imagePaths[indexPath.row])
         
         
         return (cell as UITableViewCell)
