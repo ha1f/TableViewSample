@@ -59,22 +59,21 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Dispose of any resources that can be recreated.
     }
     
-    // セルの行数
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    // 行数（セクション数はデフォルトで1）
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return texts.count
     }
     
-    
     //セルの内容を変更
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell0") as! MyCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell0") as! MyCell
+        
         //indexPath.rowに何行目か、indexPath.sectionに何セクション目かが与えられる。それによりデータを呼び出してセルに適用
         cell.nameLabel.text = names[indexPath.row]
         cell.subLabel.text = texts[indexPath.row]
         cell.icon.image = UIImage(named: imagePaths[indexPath.row])
         
-        
-        return (cell as UITableViewCell)
+        return cell
     }
     
     
